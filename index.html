@@ -2,7 +2,18 @@
 <html lang="en">
   <head>
     <link rel="icon" href="favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <link rel="preload" as="image" href="./imgs/lump.png" />
+    <link rel="preload" as="image" href="./imgs/foto_sobre_mim.webp" />
+    <link rel="preload" as="image" href="./imgs/foto_para_psicologa.webp" />
+    <link rel="preload" as="image" href="./imgs/foto_psicoterapia.webp" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Tiago Ramos Silva" />
@@ -100,7 +111,7 @@
           da sua história.
         </span>
         <img
-          src="./imgs/foto_sobre_mim.jpeg"
+          src="./imgs/foto_sobre_mim.webp"
           alt="Foto da pagina sobre mim"
           width="100%"
           height="100%"
@@ -113,7 +124,7 @@
       <div class="conteudo_psicoterapia">
         <h1 class="titulo_psicoterapia">SOBRE O MEU TRABALHO</h1>
         <img
-          src="./imgs/foto_psicoterapia.jpeg"
+          src="./imgs/foto_psicoterapia.webp"
           alt="Foto da pagina sobre mim"
           width="100%"
           height="100%"
@@ -138,7 +149,11 @@
           Vamos começar?
         </span>
         <div class="bttn_psicoterapia">
-          <a href="https://wa.me/5511920688516" target="_blank">
+          <a
+            href="https://wa.me/5511920688516"
+            target="_blank"
+            aria-label="Link para o wpp"
+          >
             Entre em contato : )
           </a>
         </div>
@@ -166,7 +181,7 @@
           Vamos dar os primeiros passos na profissão com mais leveza e clareza.
         </span>
         <img
-          src="./imgs/foto_para_psicologa.jpg"
+          src="./imgs/foto_para_psicologa.webp"
           alt="Foto da pagina sobre mim"
           width="100%"
           height="60%"
@@ -174,7 +189,11 @@
         />
       </div>
       <div class="bttn_psis">
-        <a href="https://wa.me/5511920688516" target="_blank">
+        <a
+          href="https://wa.me/5511920688516"
+          target="_blank"
+          aria-label="Link para o wpp"
+        >
           Falar sobre mentoria!
         </a>
       </div>
@@ -185,19 +204,28 @@
         <a
           href="https://www.instagram.com/psiraquelmoraes?igsh=MWJ4cW04eDV2eXN2Mw%3D%3D&utm_source=qr"
           target="_blank"
+          aria-label="Link para o instagram"
         >
           <i class="fa-brands fa-instagram"></i>
         </a>
         <a
           href="https://www.tiktok.com/@psi.raquelmoraes?_t=ZM-8wts1fwh4dS&_r=1"
           target="_blank"
+          aria-label="Link para o tiktok"
         >
           <i class="fa-brands fa-tiktok"></i>
         </a>
-        <a href="mailto:raquelmoraescorreia@gmail.com">
+        <a
+          href="mailto:raquelmoraescorreia@gmail.com"
+          aria-label="Link para o e-mail"
+        >
           <i class="fa-solid fa-at"></i>
         </a>
-        <a href="https://wa.me/5511920688516" target="_blank">
+        <a
+          href="https://wa.me/5511920688516"
+          target="_blank"
+          aria-label="Link para o wpp"
+        >
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
@@ -210,6 +238,7 @@
         <a
           href="https://tiagoramossilva.github.io/site-TiagoRamos/"
           target="_blank"
+          aria-label="Link para o portifolio do Tiago Ramos Silva"
           >Tiago Ramos Silva.</a
         >
       </div>
@@ -220,9 +249,10 @@
       href="https://wa.me/5511920688516"
       class="whatsapp-float"
       target="_blank"
+      aria-label="Link para o wpp"
     >
       <i class="fab fa-whatsapp whatsapp-icon"></i>
     </a>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

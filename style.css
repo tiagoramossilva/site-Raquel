@@ -159,6 +159,7 @@ pagina sobre mim  */
   width: 25rem; /* ou outro tamanho fixo */
   height: 38rem;
   object-fit: cover;
+  aspect-ratio: 3 / 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
 }
 
@@ -204,6 +205,7 @@ pagina psicoterapia  */
   width: 25rem; /* ou outro tamanho fixo */
   height: 30rem;
   object-fit: cover;
+  aspect-ratio: 3 / 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
 }
 
@@ -273,6 +275,7 @@ pagina para psicologa  */
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
   margin-bottom: 2rem;
+  aspect-ratio: 3 / 2;
 }
 
 .bttn_psis {
@@ -525,7 +528,7 @@ footer {
 
 /* Responsividade: telas até 480px (celulares pequenos) */
 @media screen and (max-width: 480px) {
-     .lamp-light {
+  .lamp-light {
     position: relative;
   }
 
