@@ -1,0 +1,597 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-display: optional;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #515151;
+  transition: background-color 0.3s ease;
+}
+
+/* pagina inicial  */
+
+.lamp-light {
+  position: relative;
+}
+
+.lamp-light::after {
+  content: "";
+  position: absolute;
+  top: 53%; /* ajuste conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3vw;
+  height: 6vh;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 200, 0.5) 0%,
+    rgba(255, 255, 200, 0.2) 40%,
+    transparent 70%
+  );
+  box-shadow: 20px 10px 20px rgba(255, 255, 200, 0.6),
+    0 0 40px rgba(255, 255, 200, 0.3);
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 200, 0.6),
+      0 0 40px rgba(255, 255, 200, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 200, 0.8),
+      0 0 60px rgba(255, 255, 200, 0.4);
+  }
+}
+
+.lamp-light::after {
+  animation: pulse 2s infinite;
+}
+
+.pagina_inicial {
+  background-color: #88a9c3;
+  width: 100%;
+}
+
+.conteudo_pagina_inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+.conteudo_pagina_inicial img {
+  width: 30%;
+  height: 100%;
+}
+
+.titulo_pagina_incial {
+  font-size: 96px;
+  font-weight: 250;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.texto_pagina_incial {
+  font-size: 36px;
+  font-weight: 200;
+  font-family: "Raleway", sans-serif;
+}
+
+/* 
+pagina sobre mim  */
+
+.sobre_mim {
+  background-color: #d8bf9f; /* Cor de fundo suave e acolhedora */
+  padding: 4rem 1.5rem;
+  font-family: "Raleway", sans-serif; /* Fonte moderna e legível */
+  color: #333; /* Cor de texto suave */
+  line-height: 1.6;
+}
+
+.conteudo_sobre_mim {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas de tamanho igual */
+  gap: 40px;
+  align-items: center;
+}
+
+.titulo_sobre_mim {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  grid-column: 1 / -1;
+}
+
+.texto_sobre_mim {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-align-last: start;
+}
+
+.foto_sobre_mim {
+  width: 25rem; /* ou outro tamanho fixo */
+  height: 38rem;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
+}
+
+/* 
+pagina psicoterapia  */
+
+.psicoterapia {
+  background-color: #d8bf9f; /* Cor de fundo suave e acolhedora */
+  padding: 4rem 1.5rem;
+  font-family: "Raleway", sans-serif; /* Fonte moderna e legível */
+  color: #333; /* Cor de texto suave */
+  line-height: 1.6;
+}
+
+.conteudo_psicoterapia {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas de tamanho igual */
+  gap: 40px;
+  align-items: center;
+}
+
+.titulo_psicoterapia {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  grid-column: 1 / -1;
+}
+
+.texto_psicoterapia {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-align-last: start;
+}
+
+.foto_psicoterapia {
+  width: 25rem; /* ou outro tamanho fixo */
+  height: 30rem;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
+}
+
+.bttn_psicoterapia {
+  grid-column: 1 / -1;
+  background-color: #8d6e63;
+  text-decoration: none;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 3rem;
+  width: 20rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
+}
+
+.bttn_psicoterapia:hover {
+  background-color: #7d645b;
+}
+
+.bttn_psicoterapia a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* 
+pagina para psicologa  */
+
+.para_psicologas {
+  background-color: #d8bf9f; /* Cor de fundo suave e acolhedora */
+  padding: 4rem 1.5rem;
+  font-family: "Raleway", sans-serif; /* Fonte moderna e legível */
+  color: #333; /* Cor de texto suave */
+  line-height: 1.6;
+}
+
+.conteudo_para_psicologas {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas de tamanho igual */
+  gap: 40px;
+  align-items: center;
+}
+
+.titulo_para_psicologas {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  grid-column: 1 / -1;
+}
+
+.texto_para_psicologas {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-align-last: start;
+}
+
+.foto_psis {
+  width: 25rem; /* ou outro tamanho fixo */
+  height: 40rem;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
+  margin-bottom: 2rem;
+}
+
+.bttn_psis {
+  grid-column: 1 / -1;
+  background-color: #8d6e63;
+  text-decoration: none;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 3rem;
+  width: 20rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: sombra para dar destaque */
+}
+
+.bttn_psis:hover {
+  background-color: #7d645b;
+}
+
+.bttn_psis a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* contato */
+
+.contato {
+  background-color: #88a9c3;
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.contato a {
+  text-decoration: none;
+}
+
+.contato i {
+  padding: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+.contato i:hover {
+  color: #515151;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 60px;
+  text-align: center;
+}
+
+.footer-content {
+  display: inline-block;
+}
+
+.footer-content a {
+  text-decoration: none;
+}
+
+/* tag do whatsapp */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+  margin-top: 2px;
+}
+
+.whatsapp-float::after {
+  content: "Entre em contato!";
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.whatsapp-float:hover::after {
+  opacity: 1;
+}
+
+/* Responsividade: telas até 1024px (tablets e menores) */
+@media screen and (min-width: 2000px) {
+  .lamp-light {
+    position: relative;
+  }
+
+  .lamp-light::after {
+    content: "";
+    position: absolute;
+    top: 53%; /* ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2vw;
+    height: 4vh;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 200, 0.5) 0%,
+      rgba(255, 255, 200, 0.2) 40%,
+      transparent 70%
+    );
+    box-shadow: 20px 10px 20px rgba(255, 255, 200, 0.6),
+      0 0 40px rgba(255, 255, 200, 0.3);
+    z-index: 0;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(255, 255, 200, 0.6),
+        0 0 40px rgba(255, 255, 200, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 255, 200, 0.8),
+        0 0 60px rgba(255, 255, 200, 0.4);
+    }
+  }
+
+  .lamp-light::after {
+    animation: pulse 2s infinite;
+  }
+  .navbar nav ul {
+    gap: 30px;
+  }
+
+  .conteudo_sobre_mim,
+  .conteudo_psicoterapia,
+  .conteudo_para_psicologas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .foto_sobre_mim,
+  .foto_psicoterapia,
+  .foto_psis {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .titulo_sobre_mim,
+  .titulo_psicoterapia,
+  .titulo_para_psicologas {
+    font-size: 2rem;
+  }
+
+  .texto_sobre_mim,
+  .texto_psicoterapia,
+  .texto_para_psicologas {
+    font-size: 1.1rem;
+  }
+
+  .bttn_psicoterapia,
+  .bttn_psis {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
+
+/* Responsividade: telas até 768px (celulares maiores) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .contato i {
+    padding: 10px;
+    font-size: 30px;
+    color: #333;
+  }
+
+  .conteudo_sobre_mim,
+  .conteudo_psicoterapia,
+  .conteudo_para_psicologas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .foto_sobre_mim,
+  .foto_psicoterapia,
+  .foto_psis {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .titulo_sobre_mim,
+  .titulo_psicoterapia,
+  .titulo_para_psicologas {
+    font-size: 2rem;
+  }
+
+  .texto_sobre_mim,
+  .texto_psicoterapia,
+  .texto_para_psicologas {
+    font-size: 1.1rem;
+  }
+
+  .bttn_psicoterapia,
+  .bttn_psis {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+/* Responsividade: telas até 480px (celulares pequenos) */
+@media screen and (max-width: 480px) {
+     .lamp-light {
+    position: relative;
+  }
+
+  .lamp-light::after {
+    content: "";
+    position: absolute;
+    top: 52%; /* ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3vw;
+    height: 3vh;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 200, 0.5) 0%,
+      rgba(255, 255, 200, 0.2) 40%,
+      transparent 70%
+    );
+    box-shadow: 20px 10px 20px rgba(255, 255, 200, 0.6),
+      0 0 40px rgba(255, 255, 200, 0.3);
+    z-index: 0;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(255, 255, 200, 0.6),
+        0 0 40px rgba(255, 255, 200, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 255, 200, 0.8),
+        0 0 60px rgba(255, 255, 200, 0.4);
+    }
+  }
+
+  .lamp-light::after {
+    animation: pulse 2s infinite;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .contato {
+    height: 26vh; /* ou um valor fixo como 400px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contato-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo_pagina_incial {
+    font-size: 36px;
+  }
+
+  .texto_pagina_incial {
+    font-size: 18px;
+  }
+
+  .bttn_psicoterapia,
+  .bttn_psis {
+    font-size: 16px;
+    padding: 0.75rem;
+    margin-top: 2rem;
+  }
+}
